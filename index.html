@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="ace/src/ace.js"></script>
+	<script src="ace/src/ext-language_tools.js"></script>
+    <link rel="stylesheet" href="css/main.css">
+    <title>Home</title>
+</head>
+<body>
+
+    <div class="container" id="container">
+        <div id="menubar">
+            <div onclick="saveas()" class="dropdown">Save</div>
+            <div class="dropdown" id="filename">Save</div>
+        </div>
+        <div id="editor"></div>
+    </div>
+
+    <div id="welcome">
+        <canvas></canvas>
+        <div class="btns" id="btnsdiv">
+            <span onclick="myfl.click()" class="btn" id="btn1">Open</span>
+            <span onclick="updateEditor('New File Created','untitled.txt')" class="btn" id="btn2">New</span>
+            <span onclick="updateEditor(localStorage.getItem('LastFileContent'),localStorage.getItem('LastFileName'))" class="btn" id="btn2">Last File</span>
+        </div> 
+    </div>
+
+    <input type="file" id="myfl"/>
+
+
+    <!-- <div class="sidebar"></div> -->
+    <script src="js/main.js"></script>
+    <script src="js/falling.js"></script>
+    <script src="js/editor.js"></script>
+</body>
+</html>
